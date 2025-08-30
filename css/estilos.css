@@ -1,0 +1,158 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background: #009688;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Bienvenida */
+.bienvenida {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Servicios */
+.servicios {
+    padding: 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Para que sea responsive */
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Blog */
+.blog {
+    padding: 20px;
+}
+
+.posts {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.blog article {
+    width: 300px;
+    text-align: center;
+}
+
+.blog img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Galería */
+.galeria {
+    padding: 20px;
+    text-align: center;
+}
+
+.imagenes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+.imagenes img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Contacto */
+footer {
+    background: #009688;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+/*Version para escritorio, cuando el ancho de la pantalla
+supere los 720px se aplicarán los estilos */
+/*MediaQuerys para responsive web Desing*/
+@media (min-width:720px)
+{
+    header {
+        position: fixed;
+        width: 100%;
+    }
+    header .container{
+    flex-direction: row;
+    justify-content: space-between;
+    }
+    header nav {
+        flex-direction: row;
+        padding-bottom: 0;
+    }
+    #hero h1{
+        font-size: 5em;
+    }
+    #somos-proya .container
+    {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #somos-proya .texto
+    {
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+    }
+    #somos-proya .img-container
+    {
+        background-image: url("../img/somos-proya.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+    }
+    #nuestros-programas .programas
+    {
+        display: flex;
+        justify-content: center;
+    }
+    #nuestros-programas p
+    {
+        display: block;
+    }
+
+}
